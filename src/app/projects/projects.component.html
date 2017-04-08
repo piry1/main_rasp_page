@@ -1,3 +1,9 @@
-<p>
-  projects works!
-</p>
+<div class="container">
+  <h1 align="center">Projects</h1>
+  <ul *ngFor="let project of projects">
+    <li class="well project-list">{{project.name}}
+      <br><strong class="tech">Technologyies: </strong>
+      <span class="tech" *ngFor="let tech of project.technologyies">{{tech}} &nbsp;&nbsp;&nbsp;</span>
+      <button class="btn" style="visibility: hidden">X</button> <a href="mediawiki" class="btn btn-info pull-right">Go To Page</a></li>
+  </ul>
+</div>

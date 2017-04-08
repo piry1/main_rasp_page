@@ -7,6 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+  projects = [
+    {
+      name: 'MediaWiki Documentations',
+      technologyies: ['MediaWiki', 'MySQL database']
+    },
+    {
+      name: 'ngSpotify',
+      technologyies: ['Angular2', 'NodeJs', 'Spotify API']
+    },
+    {
+      name: 'ToDo List',
+      technologyies: ['Angular2', 'NodeJs', 'MongoDB']
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
