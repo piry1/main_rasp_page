@@ -1,9 +1,20 @@
 <div class="container">
-  <h1 align="center">Projects</h1>
-  <ul *ngFor="let project of projects">
-    <li class="well project-list">{{project.name}}
-      <br><strong class="tech">Technologyies: </strong>
-      <span class="tech" *ngFor="let tech of project.technologyies">{{tech}} &nbsp;&nbsp;&nbsp;</span>
-      <button class="btn" style="visibility: hidden">X</button> <a href="mediawiki" class="btn btn-info pull-right">Go To Page</a></li>
-  </ul>
+  <h1 style="text-align: center">Projects</h1>
+  <hr class="featurette-divider">
+
+  <div class="row well project-well" *ngFor="let project of projects">
+    <div class="col-md-7 col-xs-7 project-list">
+      {{project.name}}
+      <p>
+        <strong class="tech">Technologyies: </strong>
+        <span class="tech" *ngFor="let tech of project.technologyies"><a class=" tech btn a-link" href="{{tech.link}}" target="_blank">{{tech.name}}</a></span>
+      </p>
+    </div>
+    <div class="col-md-3 col-xs-2 pull-right btn-group-vertical" style="min-width: 180px;">
+      <a *ngIf="project.link != null" href="{{host}}{{project.link}}" class="btn btn-success"><span class="pull-right btn-project"><i class="fa fa-play fa-2x" aria-hidden="true"></i></span> Go To Page</a>
+      <a *ngIf="project.git != null" target="_blank" href="{{project.git}}" class="btn btn-primary"><span class="pull-right btn-project"><i class="fa fa-github fa-2x" aria-hidden="true"></i></span> Github</a>
+      <a *ngIf="project.wiki != null" target="_blank" href="{{host}}{{project.wiki}}" class="btn btn-info"><span style="margin-right: -5px;" class="pull-right btn-project"><i class="fa fa-wikipedia-w fa-2x" aria-hidden="true"></i></span> MediaWiki</a>
+    </div>
+  </div>
+
 </div>

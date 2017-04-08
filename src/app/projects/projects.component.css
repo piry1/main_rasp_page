@@ -1,7 +1,25 @@
+
 .project-list{
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .tech{
     font-size: 16px;
+}
+
+.btn-project{
+   margin-top: -5px;
+}
+
+.a-link:hover { 
+    color: #2c3e50;
+}
+
+.a-link{
+    margin: -10px;
+    margin-top: -12.5px;
+}
+
+.project-well{
+    margin-top: -12px;
 }
