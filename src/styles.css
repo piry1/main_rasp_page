@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+.loader{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;  
+    margin: auto;
+    margin-top: 50px;
+}
+
+.loader-left {
+     border: 26px solid #f3f3f3; /* Light grey */
+            border-top: 26px solid #3498db; /* Blue */
+    animation: spin_l 1.1s linear infinite;
+
+}
+
+.loader-right {
+     border: 26px solid transparent; /* Light grey */
+        border-top: 26px solid #3498db; /* Blue */
+    animation: spin_l 2s linear infinite;
+    margin-top: -200px;
+}
+
+@keyframes spin_r {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes spin_l {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
